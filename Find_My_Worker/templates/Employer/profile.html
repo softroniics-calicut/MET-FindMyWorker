@@ -1,0 +1,43 @@
+{% extends 'Employer/employer-home.html' %}
+{% block content %}
+   <!-- ***** Call to Action Start ***** -->
+   <section class="section section-bg" id="call-to-action" style="background-image: url('{static "images/banner-image-1-1920x500.jpg" }')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2><em>Profile</em></h2>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+{% endblock %}
+{% block non_block %}
+{% endblock %}
+
+{% block job %}
+<div style="width:100%">
+
+</div>
+<div class=" border d-flex flex-wrap justify-content-around py-3 my-3" >
+    <div>
+        <img src="{{ user.pic.url }}" alt="User Profile Picture" width='500px' height="400px">
+    </div>
+  <div style="width: 50%;margin-top: 20px; text-align: center;">
+    <span type="text" class="form-control text-center" style="font-size: 25px;color: white; background-color: rgb(231, 124, 24);margin-bottom: 20px;" >{{user.username}} </span>
+    <span type="text" style="font-size: 25px" >Email <br> <span style="color: rgb(231, 124, 24);font-weight: bold;">{{user.email}}</span> </span><br>
+    <span type="text" style="font-size: 25px;"> Phone <br> <span style="color: rgb(231, 124, 24);font-weight: bold;"> {{user.phone_number}}</span></span><br>
+    <span type="text" style="font-size: 25px;"> Address <br> <span style="color: rgb(231, 124, 24);font-weight: bold;"> {{user.address}}</span></span><br>
+
+  </div>
+
+
+</div>
+
+
+{% endblock %}
